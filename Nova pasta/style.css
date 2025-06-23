@@ -13,7 +13,7 @@ body {
 header {
   background: #1f1f1f;
   color: #ff5722;
-  padding: 10px;
+  padding: 20px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -34,7 +34,6 @@ header {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  margin-right: 50px; /* adiciona espaço do lado direito */
 }
 
 .carrinho-topo:hover {
@@ -47,26 +46,11 @@ header {
   margin: auto;
 }
 
-/* Aqui o principal ajuste para deixar os itens lado a lado */
 section {
   margin-bottom: 20px;
 }
 
-.titulo-categoria {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.produtos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-
 .item {
-  flex: 1 1 200px; /* cresce, encolhe, base 200px */
-  max-width: 300px;
   background: #1f1f1f;
   padding: 10px;
   border-radius: 8px;
@@ -93,6 +77,18 @@ section {
 
 .item button:hover {
   background: #1ebe57;
+}
+
+
+
+.carrinho-topo {
+  cursor: pointer;
+  font-size: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 50px; /* adiciona espaço do lado direito */
 }
 
 /* Modal carrinho */
@@ -169,7 +165,6 @@ footer {
   background: #1f1f1f;
   margin-top: 40px;
 }
-
 /* ==================== RESPONSIVIDADE ===================== */
 
 @media (max-width: 600px) {
@@ -199,7 +194,6 @@ footer {
   }
 
   .item {
-    flex: 1 1 100%;
     max-width: 100%;
   }
 
@@ -213,17 +207,6 @@ footer {
     padding: 10px;
     font-size: 16px;
   }
-  .titulo-categoria {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.produtos {
-  
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
 
   /* Modal fica full screen e com scroll no celular */
   .modal-conteudo {
@@ -237,3 +220,4 @@ footer {
     font-size: 16px;
   }
 }
+

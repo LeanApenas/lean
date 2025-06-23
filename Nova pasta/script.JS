@@ -1,4 +1,5 @@
 let carrinho = [];
+let total = 0;
 
 const imagensDosItens = {
   "Pizza 20cm": "https://i.pinimg.com/736x/43/9b/b3/439bb3c30302c369784a5df05cd85d70.jpg",
@@ -7,26 +8,26 @@ const imagensDosItens = {
   "Fanta Uva": "https://savegnagoio.vtexassets.com/arquivos/ids/448430-1200-auto?v=638525879874400000&width=1200&height=auto&aspect=true",
   "Guaraná": "https://cdn.discordapp.com/attachments/754358957476151376/1386480871049265282/guarana.jpg?ex=6859dc6f&is=68588aef&hm=8daed5a53f6322f08585e50f8409103018f8c794c0fea7b7d246ea6559579c2b&",
   "Batata Pequena": "https://cdn.discordapp.com/attachments/754358957476151376/1386481439226335353/120cf585d530a3cabd96226bfe18aca3.jpg?ex=6859dcf6&is=68588b76&hm=e4e20f596d67118893efface0832382a76ce41de500ab593c68b30d2f7351302&",
-  "Batata Com Cheddar": "https://cdn.discordapp.com/attachments/754358957476151376/1386498536450949244/batata-com-cheddar-e-bacon_1.jpg?ex=6859ece2&is=68589b62&hm=49928266997de4fcd9de57f236ee74130f872e1fb385fb77f3251fb350c2b405&",
+  "Batata Grande": "https://cdn.discordapp.com/attachments/754358957476151376/1386481439226335353/120cf585d530a3cabd96226bfe18aca3.jpg?ex=6859dcf6&is=68588b76&hm=e4e20f596d67118893efface0832382a76ce41de500ab593c68b30d2f7351302&",
   "X-Salada": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80"
 };
 
 function adicionarCarrinho(nome, preco) {
   carrinho.push({ nome, preco });
+  total += preco;
   atualizarCarrinho();
 }
 
 function atualizarCarrinho() {
-  const total = carrinho.reduce((acc, item) => acc + item.preco, 0);
-  atualizarCarrinhoTopo(total);
-  atualizarValorCarrinhoTopo(total);
+  atualizarCarrinhoTopo();
+  atualizarValorCarrinhoTopo();
 }
 
-function atualizarCarrinhoTopo(total) {
+function atualizarCarrinhoTopo() {
   document.getElementById('quantidade-carrinho').textContent = carrinho.length;
 }
 
-function atualizarValorCarrinhoTopo(total) {
+function atualizarValorCarrinhoTopo() {
   document.getElementById('valor-carrinho').textContent = total.toFixed(2).replace('.', ',');
 }
 
@@ -59,6 +60,8 @@ function atualizarCarrinhoModal() {
     btnRemover.onclick = () => {
       removerItem(index);
       atualizarCarrinhoModal();
+      atualizarCarrinhoTopo();
+      atualizarValorCarrinhoTopo();
     };
 
     li.appendChild(img);
@@ -68,11 +71,11 @@ function atualizarCarrinhoModal() {
     lista.appendChild(li);
   });
 
-  const total = carrinho.reduce((acc, item) => acc + item.preco, 0);
   document.getElementById('total-modal').textContent = `Total: R$${total.toFixed(2).replace('.', ',')}`;
 }
 
 function removerItem(index) {
+  total -= carrinho[index].preco;
   carrinho.splice(index, 1);
   atualizarCarrinho();
 }
@@ -87,7 +90,6 @@ function finalizarPedido() {
   carrinho.forEach((item) => {
     mensagem += `- ${item.nome} R$${item.preco.toFixed(2).replace('.', ',')}%0A`;
   });
-  const total = carrinho.reduce((acc, item) => acc + item.preco, 0);
   mensagem += `Total: R$${total.toFixed(2).replace('.', ',')}`;
 
   const telefone = '5521965843023'; // Coloque seu número com DDI

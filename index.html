@@ -18,75 +18,57 @@
 
 <main class="menu">
   <section>
-    <h2>🍕 Pizza</h2>
-    <div class="item">
-      <img src="https://i.pinimg.com/736x/43/9b/b3/439bb3c30302c369784a5df05cd85d70.jpg" alt="Pizza 20cm" />
-      <h3>Pizza 20cm</h3>
-      <p>R$30,00</p>
-      <button onclick="adicionarCarrinho('Pizza 20cm', 30)">Adicionar</button>
+    <h2 class="titulo-categoria">🍕 Pizza</h2>
+    <div class="produtos">
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/43/9b/b3/439bb3c30302c369784a5df05cd85d70.jpg" alt="Pizza 20cm" />
+        <h3>Pizza 20cm</h3>
+        <p>R$30,00</p>
+        <button onclick="adicionarCarrinho('Pizza 20cm', 30)">Adicionar</button>
+      </div>
+      <div class="item">
+        <img src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg" alt="Pizza 25cm" />
+        <h3>Pizza 25cm</h3>
+        <p>R$50,00</p>
+        <button onclick="adicionarCarrinho('Pizza 25cm', 50)">Adicionar</button>
+      </div>
     </div>
-    <div class="item">
-      <img src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg" alt="Pizza 25cm" />
-      <h3>Pizza 25cm</h3>
-      <p>R$50,00</p>
-      <button onclick="adicionarCarrinho('Pizza 25cm', 50)">Adicionar</button>
+  </section>
+
+<main class="menu">
+  <section>
+    <h2 class="titulo-categoria">🍟 Porção</h2>
+    <div class="produtos">
+      <div class="item">
+        <img src="https://cdn.discordapp.com/attachments/754358957476151376/1386481439226335353/120cf585d530a3cabd96226bfe18aca3.jpg?ex=6859dcf6&is=68588b76&hm=e4e20f596d67118893efface0832382a76ce41de500ab593c68b30d2f7351302&" alt="Batata Pequena" />
+        <h3>Batata Pequena</h3>
+        <p>R$10,00</p>
+        <button onclick="adicionarCarrinho('Batata Pequena', 10)">Adicionar</button>
+      </div>
+      <div class="item">
+        <img src="https://cdn.discordapp.com/attachments/754358957476151376/1386497916813971536/batata-com-cheddar-e-bacon.jpg?ex=6859ec4f&is=68589acf&hm=5486ef4a399d56e44ed3ff711a113d1e5060e839305a1cdd086962aa50bdd13a&" alt="Batata Com Cheddar" />
+        <h3>Batat Com Cheddar</h3>
+        <p>R$20,00</p>
+        <button onclick="adicionarCarrinho('Batata Com Cheddar', 20)">Adicionar</button>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>🥤 Refrigerante</h2>
-    <div class="item">
-      <img src="https://andinacocacola.vtexassets.com/arquivos/ids/158894-1600-auto?v=638828463792970000&width=1600&height=auto&aspect=true" alt="Coca Cola" />
-      <h3>Coca Cola</h3>
-      <p>R$10,00</p>
-      <button onclick="adicionarCarrinho('Coca Cola', 10)">Adicionar</button>
-    </div>
-    <div class="item">
-      <img src="https://savegnagoio.vtexassets.com/arquivos/ids/448430-1200-auto?v=638525879874400000&width=1200&height=auto&aspect=true" alt="Fanta Uva" />
-      <h3>Fanta Uva</h3>
-      <p>R$12,00</p>
-      <button onclick="adicionarCarrinho('Fanta Uva', 12)">Adicionar</button>
-    </div>
-    <div class="item">
-      <img src="https://cdn.discordapp.com/attachments/754358957476151376/1386480871049265282/guarana.jpg?ex=6859dc6f&is=68588aef&hm=8daed5a53f6322f08585e50f8409103018f8c794c0fea7b7d246ea6559579c2b&" />
-      <h3>Guaraná</h3>
-      <p>R$8,00</p>
-      <button onclick="adicionarCarrinho('Guaraná', 8)">Adicionar</button>
-    </div>
-  </section>
-
-  <section>
-    <h2>🍟 Porção</h2>
-    <div class="item">
-      <img
-        src="https://cdn.discordapp.com/attachments/754358957476151376/1386481439226335353/120cf585d530a3cabd96226bfe18aca3.jpg?ex=6859dcf6&is=68588b76&hm=e4e20f596d67118893efface0832382a76ce41de500ab593c68b30d2f7351302&"
-        alt="Batata Pequena"
-      />
-      <h3>Batata Pequena</h3>
-      <p>R$15,00</p>
-      <button onclick="adicionarCarrinho('Batata Pequena', 15)">Adicionar</button>
-    </div>
-    <div class="item">
-      <img
-        src="https://cdn.discordapp.com/attachments/754358957476151376/1386481439226335353/120cf585d530a3cabd96226bfe18aca3.jpg?ex=6859dcf6&is=68588b76&hm=e4e20f596d67118893efface0832382a76ce41de500ab593c68b30d2f7351302&"
-        alt="Batata Grande"
-      />
-      <h3>Batata Grande</h3>
-      <p>R$30,00</p>
-      <button onclick="adicionarCarrinho('Batata Grande', 30)">Adicionar</button>
-    </div>
-  </section>
-
-  <section>
-    <h2>🍔 Hambúrguer</h2>
-    <div class="item">
-      <img
-        src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80"
-        alt="X-Salada"
-      />
-      <h3>X-Salada</h3>
-      <p>R$15,00</p>
-      <button onclick="adicionarCarrinho('X-Salada', 15)">Adicionar</button>
+    <h2 class="titulo-categoria">🥤 Refrigerante</h2>
+    <div class="produtos">
+      <div class="item">
+        <img src="https://andinacocacola.vtexassets.com/arquivos/ids/158894-1600-auto?v=638828463792970000&width=1600&height=auto&aspect=true" alt="Coca Cola" />
+        <h3>Coca Cola</h3>
+        <p>R$10,00</p>
+        <button onclick="adicionarCarrinho('Coca Cola', 10)">Adicionar</button>
+      </div>
+      <div class="item">
+        <img src="https://savegnagoio.vtexassets.com/arquivos/ids/448430-1200-auto?v=638525879874400000&width=1200&height=auto&aspect=true" alt="Fanta Uva" />
+        <h3>Fanta Uva</h3>
+        <p>R$12,00</p>
+        <button onclick="adicionarCarrinho('Fanta Uva', 12)">Adicionar</button>
+      </div>
     </div>
   </section>
 </main>
