@@ -90,7 +90,7 @@ function finalizarPedido() {
   const total = carrinho.reduce((acc, item) => acc + item.preco, 0);
   mensagem += `Total: R$${total.toFixed(2).replace('.', ',')}`;
 
-  const telefone = '5521965843023'; // Coloque seu número com DDI
+  const telefone = '5521999870967'; // Coloque seu número com DDI
   const url = `https://wa.me/${telefone}?text=${mensagem}`;
   window.open(url, '_blank');
 }
